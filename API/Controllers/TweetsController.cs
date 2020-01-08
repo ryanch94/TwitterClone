@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace API.Controllers
@@ -12,20 +14,17 @@ namespace API.Controllers
     [ApiController]
     public class TweetsController : ControllerBase
     {
-        public TweetsController()
-        {
+        private DataContext _context;
 
+        public TweetsController(DataContext context)
+        {
+            _context = context;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Tweet>>> List()
         {
-            return new List<Tweet>
-            {
-                new Tweet {Id = 1, Body = "Tweet 1"},
-                new Tweet {Id = 2, Body = "Tweet 2"},
-                new Tweet {Id = 3, Body = "Tweet 3"}
-            };
+            return await _context.Tweets.ToListAsync();
         }
     }
 }
