@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{5E98C249-6BA3-4529-B67A-A7A52E121AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{5E98C249-6BA3-4529-B67A-A7A52E121AC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2EEE11E4-E2E4-4278-AE1C-D4CE9BDE1774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2EEE11E4-E2E4-4278-AE1C-D4CE9BDE1774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{ED45314A-D731-426C-86FA-FF5818FF6EEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{ED45314A-D731-426C-86FA-FF5818FF6EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{DF260E53-4331-4CB2-818F-DD605510BAED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{88292755-8D3C-403A-BE1F-445AB08A52AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{ED45314A-D731-426C-86FA-FF5818FF6EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED45314A-D731-426C-86FA-FF5818FF6EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED45314A-D731-426C-86FA-FF5818FF6EEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF260E53-4331-4CB2-818F-DD605510BAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF260E53-4331-4CB2-818F-DD605510BAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF260E53-4331-4CB2-818F-DD605510BAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF260E53-4331-4CB2-818F-DD605510BAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88292755-8D3C-403A-BE1F-445AB08A52AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88292755-8D3C-403A-BE1F-445AB08A52AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88292755-8D3C-403A-BE1F-445AB08A52AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88292755-8D3C-403A-BE1F-445AB08A52AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
