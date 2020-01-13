@@ -26,5 +26,16 @@ namespace API.Controllers
         {
             return await _context.Tweets.ToListAsync();
         }
+
+        [HttpPost]
+        public async Task<ActionResult<int>> Create(Tweet tweet)
+        {
+            _context.Tweets.Add(tweet);
+            int res = await _context.SaveChangesAsync();
+            if (res > 0)
+                return tweet.Id;
+            else
+                return 0;
+        }
     }
 }

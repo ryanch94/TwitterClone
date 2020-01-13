@@ -26,6 +26,8 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\App.tsx" />
+    <None Remove="ClientApp\src\Components\tweet.tsx" />
+    <None Remove="ClientApp\src\Components\tweetComposer.tsx" />
   </ItemGroup>
 
   <ItemGroup>

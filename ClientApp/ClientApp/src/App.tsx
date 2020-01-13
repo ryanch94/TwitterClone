@@ -1,15 +1,17 @@
-import React, { Component, Fragment, useState, useEffect } from 'react';
-
+import React, { Fragment, useState, useEffect } from 'react';
+import { Tweet } from "./Components/tweet"
+import { TweetComposer } from "./Components/tweetComposer"
 import './custom.css'
-import { Card, CardBody, Container, CardSubtitle } from 'reactstrap';
+import { Container } from 'reactstrap';
+import axios from 'axios'
 
-interface ITweet {
+export interface ITweet {
     id: number;
     body: string;
     user: IUser;
 }
 
-interface IUser {
+export interface IUser {
     userId: number;
     firstName: string;
     lastName: string;
@@ -32,36 +34,26 @@ const App = () => {
         }
     });
 
+    const createTweet = () => {
+        axios.post("https://localhost:44333/api/tweets")
+            .then((response) => {
+                console.log(response);
+            })
+    };
+
     return (    
         <Fragment>
             <Container>
                 <h1><a href="/">TwitterClone</a></h1>
+                <TweetComposer createTweet={createTweet}></TweetComposer>
                 {data.map((tweet: ITweet) => (
-                    <Card>
-                        <CardBody>
-                            <a href=".">
-                                <h3>{tweet.user.firstName} {tweet.user.lastName}</h3>
-                                <CardSubtitle>@{tweet.user.username}</CardSubtitle>
-                            </a>
-                            <p>{tweet.body}</p>
-                            
-                        </CardBody>
-                    </Card>
+                    <Tweet tweet={tweet}></Tweet>
                 ))}
             </Container>
         </Fragment>
     );
 }
 
-function userLikesTweet(tweetId: number, userId: number) {
-    if (tweetId === 0 || userId === 0) return false;
-    fetch("https://localhost:44333/api/likes?tweetId=" + tweetId + "&userId" + userId)
-        .then((resp) => {
-            if (resp.ok) {
-                return resp.json();
-            }
-        })
-    return true;
-}
+
 
 export default App;

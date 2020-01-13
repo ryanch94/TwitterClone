@@ -16,3 +16,14 @@ code {
 .card {
     margin-bottom: 20px;
 }
+
+.tweet-composer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid gainsboro;
+    padding: 10px
+}
+
+.tweet-composer button {
+    margin-top:10px;
+}
